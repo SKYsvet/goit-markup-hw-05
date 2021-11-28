@@ -85,8 +85,14 @@ body {
 
 /* навигация и контакты */
 
+.link-current {
+  position: relative;
+}
+
 .link-current::after {
   content: '';
+  position: absolute;
+  bottom: -36px;
   display: block;
   width: 100%;
   height: 4px;
@@ -402,15 +408,16 @@ body {
   border-color: var(--color-accent);
 }
 
-.link-clients:hover .icon-clients {
+.link-clients:hover .icon-clients,
+.link-clients:focus .icon-clients {
   fill: var(--color-accent);
-  transition: fill var(--duration) var(--timing-function);
 }
 
 .icon-clients {
   width: 106px;
   height: 60px;
   fill: currentColor;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .item-clients:not(:last-child) {
@@ -485,6 +492,7 @@ body {
 
 .social-svg-footer {
   fill: currentColor;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 /* Портфолио */
@@ -570,8 +578,8 @@ body {
   transition: transform var(--duration) var(--timing-function);
 }
 
-.thumb-overlay:hover .text-overlay,
-.thumb-overlay:focus .text-overlay {
+.img-link:hover .text-overlay,
+.img-link:focus .text-overlay {
   transform: translateY(0);
 }
 
@@ -622,7 +630,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 1000ms linear;
+  transition: opacity var(--duration) var(--timing-function);
 }
 
 .is-hidden {
@@ -636,7 +644,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 1000ms linear;
+  transition: transform var(--duration) var(--timing-function);
   width: 528px;
   min-height: 581px;
   background-color: #ffffff;
