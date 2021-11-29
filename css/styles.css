@@ -390,7 +390,6 @@ body {
   height: 92px;
   display: flex;
   justify-content: center;
-  border-radius: 4px;
 }
 
 .link-clients {
@@ -401,6 +400,7 @@ body {
   justify-content: center;
   color: #afb1b8;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 .link-clients:focus,
@@ -481,8 +481,7 @@ body {
 .link-social-footer {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: color var(--duration) var(--timing-function),
-    bacgraund-color var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .link-social-footer:hover,
@@ -492,7 +491,6 @@ body {
 
 .social-svg-footer {
   fill: currentColor;
-  transition: fill var(--duration) var(--timing-function);
 }
 
 /* Портфолио */
@@ -657,19 +655,14 @@ body {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
-.modal-link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   background-color: #ffffff;
